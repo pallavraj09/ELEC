@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electricity Calculator</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+
+  <h1>Electricity Calculator</h1>
+
+  <label for="users">Select User:</label>
+  <select id="users">
+    <option value="Gudiya">Gudiya</option>
+    <option value="Manish">Manish</option>
+    <option value="Rani">Rani</option>
+    <option value="user4">User 4</option>
+    <option value="user5">User 5</option>
+  </select>
+
+  <br>
+
+  <label for="years">Select Year:</label>
+  <select id="years">
+    <!-- Add more years as needed -->
+    <option value="2024">2024</option>
+    <option value="2025">2025</option>
+  </select>
+
+  <br>
+
+  <label for="months">Select Month:</label>
+  <select id="months">
+    <option value="January">January</option>
+    <option value="February">February</option>
+    <option value="March">March</option>
+    <option value="April">April</option>
+    <option value="May">May</option>
+    <option value="June">June</option>
+    <option value="July">July</option>
+    <option value="August">August</option>
+    <option value="September">September</option>
+    <option value="October">October</option>
+    <option value="November">November</option>
+    <option value="December">December</option>
+    <!-- Add more months as needed -->
+  </select>
+
+  <br>
+
+  <label for="previousMonthReading">Enter Previous Month Reading:</label>
+  <input type="number" id="previousMonthReading" placeholder="Enter previous month reading">
+
+  <br>
+
+  <label for="currentMonthReading">Enter Current Month Reading:</label>
+  <input type="number" id="currentMonthReading" placeholder="Enter current month reading">
+
+  <br>
+
+  <button onclick="calculate()">Calculate</button>
+  <button onclick="sortTable()">Sort</button>
+
+  <table id="resultTable">
+    <thead>
+      <tr>
+        <th>Year</th>
+        <th>Month</th>
+        <th>User</th>
+        <th>Previous Month Reading</th>
+        <th>Current Month Reading</th>
+        <th>Electricity Units</th>
+        <th>Price</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody id="tableBody">
+      <!-- Results will be displayed here -->
+    </tbody>
+  </table>
+
+  <!-- Display Units Used by Users outside the table -->
+  <label for="unitsUsedByUsers">Units Used by Users: </label>
+  <span id="unitsUsedByUsers">0</span>
+
+  <!-- Display Main Meter Units Used outside the table -->
+  <label for="mainMeterUnitsUsed">Main Meter Units Used: </label>
+  <span id="mainMeterUnitsUsed">0</span>
+
+  <!-- Input for updating Main Meter Units Used -->
+  <button onclick="updateMainMeterUnitsUsed()">Update Main Meter Units Used</button>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
